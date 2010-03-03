@@ -133,6 +133,11 @@ static NSString *kIASKCredits = @"Powered by InAppSettingsKit"; // Leave this as
 	[super viewDidAppear:animated];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+  [super viewDidDisappear:animated];
+  self.navigationController.delegate = nil;
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait) || (interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
 }
@@ -156,6 +161,7 @@ static NSString *kIASKCredits = @"Powered by InAppSettingsKit"; // Leave this as
 }
 
 - (void)dealloc {
+  self.navigationController.delegate = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [_viewList release];
     [_currentIndexPath release];
