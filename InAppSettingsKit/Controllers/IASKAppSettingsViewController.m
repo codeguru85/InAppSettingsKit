@@ -133,9 +133,9 @@ static NSString *kIASKCredits = @"Powered by InAppSettingsKit"; // Leave this as
 	[super viewDidAppear:animated];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-  [super viewDidDisappear:animated];
+- (void)viewWillDisappear:(BOOL)animated {
   self.navigationController.delegate = nil;
+  [super viewWillDisappear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
