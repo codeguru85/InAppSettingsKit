@@ -56,6 +56,8 @@
 
 #define kIASKPSChildPaneSpecifier             @"PSChildPaneSpecifier"
 
+#define kIASKDDOpenURLSpecifier               @"DDOpenURLSpecifier"
+
 #define kIASKBundleFolder                     @"Settings.bundle"
 #define kIASKBundleFilename                   @"Root.plist"
 

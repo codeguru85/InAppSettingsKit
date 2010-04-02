@@ -398,6 +398,12 @@ static NSString *kIASKCredits = @"Powered by InAppSettingsKit"; // Leave this as
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         return cell;
     }
+    else if ([[specifier type] isEqualToString:kIASKDDOpenURLSpecifier]) {
+        UITableViewCell *cell = [[[IASKPSTitleValueSpecifierViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kIASKDDOpenURLSpecifier] autorelease];
+        [[cell textLabel] setText:[specifier title]];
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        return cell;        
+    }    
     else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[specifier type]];
 		
@@ -480,6 +486,9 @@ static NSString *kIASKCredits = @"Powered by InAppSettingsKit"; // Leave this as
 		targetViewController.title = specifier.title;
         targetViewController.showCreditsFooter = NO;
         [[self navigationController] pushViewController:targetViewController animated:YES];
+    }
+    else if ([[specifier type] isEqualToString:kIASKDDOpenURLSpecifier]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:specifier.file]];
     }
     else {
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
