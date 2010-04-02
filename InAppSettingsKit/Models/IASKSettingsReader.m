@@ -66,7 +66,7 @@ dataSource=_dataSource;
     NSMutableArray *dataSource      = [[[NSMutableArray alloc] init] autorelease];
     
     for (NSDictionary *specifier in preferenceSpecifiers) {
-        if ([(NSString*)[specifier objectForKey:kIASKType] isEqualToString:kIASKPSGroupSpecifier]) {
+        if ([(NSString*)[specifier objectForKey:kIASKType] isEqualToString:kIASKPSGroupSpecifier] || [(NSString*)[specifier objectForKey:kIASKType] isEqualToString:kIASKDDGroupSpecifier]) {
             NSMutableArray *newArray = [[NSMutableArray alloc] init];
             
             [newArray addObject:specifier];
