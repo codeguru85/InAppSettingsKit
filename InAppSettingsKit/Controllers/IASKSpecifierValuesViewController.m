@@ -88,10 +88,13 @@
 #pragma mark UITableView delegates
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#pragma unused(tableView)
 	return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#pragma unused(tableView)
+#pragma unused(section)	
     return [_currentSpecifier multipleValuesCount];
 }
 

@@ -50,6 +50,7 @@
 }
 
 - (void)_reinterpretValues:(NSDictionary*)specifierDict {
+#pragma unused(specifierDict)
     NSArray *values = [_specifierDict objectForKey:kIASKValues];
     NSArray *titles = [_specifierDict objectForKey:kIASKTitles];
     

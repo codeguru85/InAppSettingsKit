@@ -26,9 +26,9 @@
 #import "IASKSpecifier.h"
 #import "IASKSpecifierValuesViewController.h"
 
-static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
-static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
-static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
+static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3f;
+static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2f;
+static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8f;
 static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
@@ -150,6 +150,8 @@ static NSString *kIASKCredits = @"Powered by InAppSettingsKit"; // Leave this as
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+#pragma unused(navigationController)
+#pragma unused(animated)
 	if (![viewController isKindOfClass:[IASKAppSettingsViewController class]] && ![viewController isKindOfClass:[IASKSpecifierValuesViewController class]]) {
 		[self dismiss:nil];
 	}
@@ -175,6 +177,7 @@ static NSString *kIASKCredits = @"Powered by InAppSettingsKit"; // Leave this as
 #pragma mark Actions
 
 - (IBAction)dismiss:(id)sender {
+#pragma unused(sender)
 	if ([self.currentFirstResponder canResignFirstResponder]) {
 		[self.currentFirstResponder resignFirstResponder];
 	}
@@ -220,14 +223,17 @@ static NSString *kIASKCredits = @"Powered by InAppSettingsKit"; // Leave this as
 #pragma mark UITableView Functions
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#pragma unused(tableView)
 	return [self.settingsReader numberOfSections];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#pragma unused(tableView)
     return [self.settingsReader numberOfRowsForSection:section];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+#pragma unused(tableView)
     return [self.settingsReader titleForSection:section];
 }
 
@@ -239,6 +245,7 @@ static NSString *kIASKCredits = @"Powered by InAppSettingsKit"; // Leave this as
 }*/
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+#pragma unused(tableView)
     if (!_showCreditsFooter || section != [self.settingsReader numberOfSections]-1) return nil;
     
     // Show the credits only in the last section's footer
@@ -416,6 +423,7 @@ static NSString *kIASKCredits = @"Powered by InAppSettingsKit"; // Leave this as
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+#pragma unused(tableView)
 	IASKSpecifier *specifier  = [self.settingsReader specifierForIndexPath:indexPath];
 	
 	if ([[specifier type] isEqualToString:kIASKPSToggleSwitchSpecifier]) {
