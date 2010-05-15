@@ -15,6 +15,7 @@
 		289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233A90DB2D0DB0083E9F9 /* MainViewController.m */; };
 		6A1F35EE11490727003E6295 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A1F35ED11490727003E6295 /* Icon.png */; };
 		6A9BBF591148F1DA003D97FA /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A9BBF581148F1DA003D97FA /* 20-gear2.png */; };
+		77E6814A119F5CEF0084D181 /* IASKHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E68149119F5CEF0084D181 /* IASKHelper.m */; };
 		AA40952A1149663600C3BBFF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA4095291149663600C3BBFF /* Localizable.strings */; };
 		AA87D1DD113FB0FA00101881 /* IASKPSTitleValueSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA87D1DC113FB0FA00101881 /* IASKPSTitleValueSpecifierViewCell.m */; };
 		AA8D0ED51136E17600EEB1C6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA8D0ED31136E17600EEB1C6 /* MainWindow.xib */; };
@@ -50,6 +51,8 @@
 		6A1F35ED11490727003E6295 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		6A9BBEE11148EE4B003D97FA /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		6A9BBF581148F1DA003D97FA /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
+		77E68148119F5CEF0084D181 /* IASKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IASKHelper.h; path = ../InAppSettingsKit/IASKHelper.h; sourceTree = SOURCE_ROOT; };
+		77E68149119F5CEF0084D181 /* IASKHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IASKHelper.m; path = ../InAppSettingsKit/IASKHelper.m; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* InAppSettingsKitSampleApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "InAppSettingsKitSampleApp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		AA4095271149662F00C3BBFF /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA40952B1149664400C3BBFF /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 		DA33F57D10BC2222004736E8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				77E68148119F5CEF0084D181 /* IASKHelper.h */,
+				77E68149119F5CEF0084D181 /* IASKHelper.m */,
 				DA33F57E10BC2222004736E8 /* IASKSettingsReader.h */,
 				DA33F57F10BC2222004736E8 /* IASKSettingsReader.m */,
 				DA33F58010BC2222004736E8 /* IASKSpecifier.h */,
@@ -337,6 +342,7 @@
 				DA33F59D10BC2222004736E8 /* IASKSwitch.m in Sources */,
 				DA33F59E10BC2222004736E8 /* IASKTextField.m in Sources */,
 				AA87D1DD113FB0FA00101881 /* IASKPSTitleValueSpecifierViewCell.m in Sources */,
+				77E6814A119F5CEF0084D181 /* IASKHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

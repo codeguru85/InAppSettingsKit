@@ -72,7 +72,6 @@
 #define kIASKSliderBothImagesWidth            214
 #define kIASKSliderOneImageWidth              246
 
-#define kIASKTableWidth                       320
 #define kIASKSpacing                          5
 #define kIASKMinLabelWidth                    97
 #define kIASKMinValueWidth                    35
@@ -88,6 +87,7 @@
     NSDictionary    *_settingsBundle;
     NSArray         *_dataSource;
     NSBundle        *_bundle;
+	NSString		*_table;
 }
 
 - (id)initWithFile:(NSString*)file;
@@ -103,5 +103,6 @@
 @property (nonatomic, retain) NSString      *path;
 @property (nonatomic, retain) NSDictionary  *settingsBundle;
 @property (nonatomic, retain) NSArray       *dataSource;
+@property (nonatomic, retain) NSString      *table;
 
 @end
